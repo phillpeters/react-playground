@@ -19,7 +19,7 @@ function App() {
   return (
     <main className='App'>
       <Split className='left' flexBasis={2}>
-        This is the content for the left `Split`. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?
+        This is the content for the left `Split`. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?<br />
         {/* make another tooltip directly inside the App */}
         <Tooltip message='one more tooltip message'>
           Necessitatibus?
