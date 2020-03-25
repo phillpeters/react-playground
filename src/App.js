@@ -4,13 +4,13 @@ import './App.css';
 import Tooltip from './composition/Tooltip';
 
 const firstTooltip = (
-  <Tooltip message='tooltip message'>
+  <Tooltip color='hotpink' message='tooltip message'>
     ipsum
   </Tooltip>
 );
 
 const secondTooltip = (
-  <Tooltip message='another tooltip message'>
+  <Tooltip color='#126BCC' message='another tooltip message'>
     officiis
   </Tooltip>
 );
