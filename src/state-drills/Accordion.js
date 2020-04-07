@@ -6,22 +6,24 @@ class Accordion extends React.Component {
     sections: []
   };
   state = {
-    currentAccIndex: 0
+    currentAccIndex: null
   }
   renderListItem() {
-    return this.props.sections.map((section, index) => (
-      <li key={index}>
-        {this.renderButton(section, index)}
-        {this.renderContent(section)}
-      </li>
-    ));
+    return (this.props.sections != null && this.props.sections.length > 0) ?
+      this.props.sections.map((section, index) => (
+        <li className='Accordion__item' key={index}>
+          {this.renderButton(section, index)}
+          {this.state.currentAccIndex === index && this.renderContent(section)}
+        </li>
+      )) :
+      (<li></li>);
   }
   handleButtonClick = (index) => {
     this.setState({ currentAccIndex: index });
   }
   renderButton(section, index) {
     return (
-      <button onClick={() => this.handleButtonClick(index)}>
+      <button type='button' onClick={() => this.handleButtonClick(index)}>
         {section.title}
       </button>
     );
@@ -34,8 +36,8 @@ class Accordion extends React.Component {
   }
   render() {
     return (
-      <ul>
-        {!!this.props.sections.length && this.renderListItem()}
+      <ul className='Accordion'>
+        {this.renderListItem()}
       </ul>
     )
   }

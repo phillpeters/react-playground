@@ -23,8 +23,8 @@ const sections = [
   {
     title: 'Section 3',
     content: 'Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?',
-  },
-]
+  }
+];
 
 class App extends React.Component {
   render() {
